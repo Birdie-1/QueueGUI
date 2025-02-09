@@ -42,7 +42,11 @@ public class QueueGUI {
         panel.add(inputField);
 
         JButton enqueueButton = createStyledButton("Enqueue", new Color(152, 251, 152)); // Pastel green
+        enqueueButton.setForeground(Color.BLACK); // Ensure black text for better contrast
+
         JButton dequeueButton = createStyledButton("Dequeue", new Color(135, 206, 250)); // Pastel blue
+        dequeueButton.setForeground(Color.BLACK); // Ensure black text for better contrast
+
         panel.add(enqueueButton);
         panel.add(dequeueButton);
 
@@ -139,6 +143,6 @@ public class QueueGUI {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new QueueGUI(10));
+        SwingUtilities.invokeLater(() -> new QueueGUI(5));
     }
 }
